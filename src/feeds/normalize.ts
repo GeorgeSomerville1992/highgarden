@@ -21,10 +21,21 @@ export function normalizeLink(value: string): string | undefined {
   return url.hostname.replace(/^www\./, '') + url.pathname.replace(/\/+$/, '')
 }
 
+/**
+ * An inert document for reading text and links: no scripts run and no resources load.
+ * <style> blocks and style="" attributes are dropped first: the page's CSP would block
+ * them anyway and log a violation for each one.
+ */
+export function parseHtml(html: string): Document {
+  const unstyled = html
+    .replace(/<style[\s\S]*?<\/style\s*>/gi, '')
+    .replace(/\sstyle\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '')
+  return new DOMParser().parseFromString(unstyled, 'text/html')
+}
+
 /** Plain text from an HTML fragment: tags dropped, entities decoded, whitespace collapsed. */
 export function toText(html: string): string {
-  // DOMParser documents are inert: no scripts run and no resources load.
-  const doc = new DOMParser().parseFromString(html, 'text/html')
+  const doc = parseHtml(html)
   for (const node of doc.querySelectorAll('script, style, title, head')) node.remove()
   for (const node of doc.querySelectorAll(BLOCK_ELEMENTS)) node.after(' ')
   return collapseWhitespace(doc.body?.textContent ?? '')

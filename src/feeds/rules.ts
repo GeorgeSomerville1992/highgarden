@@ -1,4 +1,4 @@
-import { clampText, collapseWhitespace, decodeEntities, normalizeLink, safeUrl, toText } from './normalize.ts'
+import { clampText, collapseWhitespace, decodeEntities, normalizeLink, parseHtml, safeUrl, toText } from './normalize.ts'
 import type { RawItem } from './parse.ts'
 import type { FeedConfig, FeedItem } from './types.ts'
 
@@ -97,7 +97,7 @@ function newsletterSummary(html: string, title: string): string | undefined {
 
 /** Links an email points to, minus homepages and mailing-list plumbing. Used to spot repeats of site posts. */
 function outboundLinks(html: string): string[] {
-  const doc = new DOMParser().parseFromString(html, 'text/html')
+  const doc = parseHtml(html)
   const links = new Set<string>()
   for (const anchor of doc.querySelectorAll('a[href]')) {
     const link = normalizeLink(anchor.getAttribute('href') ?? '')

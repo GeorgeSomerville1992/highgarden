@@ -57,7 +57,7 @@ function App() {
               view={view}
               now={now}
               onOpen={(id) => setStored('read', markRead(getStored('read'), id))}
-              onRetry={(feedId) => refresh(feeds.filter((feed) => feed.id === feedId))}
+              onRetry={(feedIds) => refresh(feeds.filter((feed) => feedIds.includes(feed.id)))}
             />
           ),
         )}

@@ -6,11 +6,14 @@ import { FeedItemRow } from './FeedItemRow.tsx'
 
 const VISIBLE_ITEMS = 12
 
+/** "Storybook", "Storybook and React Blog", "A, B and C" */
+const names = new Intl.ListFormat('en-GB', { type: 'conjunction' })
+
 type ColumnProps = {
   view: ColumnView
   now: Date
   onOpen: (id: string) => void
-  onRetry: (feedId: string) => void
+  onRetry: (feedIds: string[]) => void
 }
 
 export function Column({ view, now, onOpen, onRetry }: ColumnProps) {
@@ -32,14 +35,14 @@ export function Column({ view, now, onOpen, onRetry }: ColumnProps) {
         <p className={styles.sources}>{sources}</p>
       </div>
 
-      {failedFeeds.map((feed) => (
-        <p key={feed.id} className={styles.notice} role="status">
-          {feed.name} couldn’t be reached ·{' '}
-          <button type="button" className={styles.linkButton} onClick={() => onRetry(feed.id)}>
+      {failedFeeds.length > 0 && (
+        <p className={styles.notice} role="status">
+          {names.format(failedFeeds.map((feed) => feed.name))} couldn’t be reached ·{' '}
+          <button type="button" className={styles.linkButton} onClick={() => onRetry(failedFeeds.map((feed) => feed.id))}>
             retry
           </button>
         </p>
-      ))}
+      )}
 
       <ol className={styles.list}>
         {visible.map((item) => (

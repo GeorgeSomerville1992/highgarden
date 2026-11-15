@@ -64,15 +64,16 @@ describe('App', () => {
     expect(stored.lastReadAt).toBeGreaterThan(sampleRead.lastReadAt)
   })
 
-  it('shows a quiet retry line for a feed that failed', () => {
+  it('shows one quiet retry line per column for feeds that failed', () => {
     const failing = structuredClone(sampleCache)
     failing.feeds.storybook.error = 'Upstream responded 503'
+    failing.feeds['react-blog'].error = 'Failed to fetch'
     localStorage.setItem('learning-feed:v1:cache', JSON.stringify(failing))
     window.dispatchEvent(new StorageEvent('storage', { key: null }))
 
     render(<App />)
     const react = column('React & Frontend')
-    expect(within(react).getByText(/Storybook couldn’t be reached/)).toBeDefined()
+    expect(within(react).getByText(/^React Blog and Storybook couldn’t be reached/)).toBeDefined()
     expect(within(react).getByRole('link', { name: 'Storybook for TanStack React' })).toBeDefined()
     expect(within(react).getByRole('button', { name: 'retry' })).toBeDefined()
   })
