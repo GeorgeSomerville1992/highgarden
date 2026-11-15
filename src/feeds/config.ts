@@ -20,7 +20,7 @@ export const columns: ColumnConfig[] = [
     name: 'React & Frontend',
     accent: { light: '#0A6A8A', dark: '#5CC8E0' },
     feeds: [
-      { id: 'twir', name: 'This Week In React', url: 'https://thisweekinreact.com/newsletter/rss.xml', maxItems: 10 },
+      { id: 'twir', name: 'This Week In React', url: 'https://thisweekinreact.com/newsletter/rss.xml', maxItems: 10, titleSummarySeparator: ': ' },
       { id: 'react-blog', name: 'React Blog', url: 'https://react.dev/rss.xml' },
       { id: 'storybook', name: 'Storybook', url: 'https://storybook.js.org/blog/rss/' },
       { id: 'frontend-mentor-newsletter', name: 'Frontend Mentor newsletter', kind: 'newsletter', url: { env: 'FRONTEND_MENTOR_NEWSLETTER_FEED_URL' } },

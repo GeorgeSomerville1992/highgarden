@@ -25,13 +25,24 @@ export function normalizeLink(value: string): string | undefined {
 export function toText(html: string): string {
   // DOMParser documents are inert: no scripts run and no resources load.
   const doc = new DOMParser().parseFromString(html, 'text/html')
-  doc.querySelectorAll('script, style, title, head').forEach((node) => node.remove())
-  doc.querySelectorAll(BLOCK_ELEMENTS).forEach((node) => node.after(' '))
+  for (const node of doc.querySelectorAll('script, style, title, head')) node.remove()
+  for (const node of doc.querySelectorAll(BLOCK_ELEMENTS)) node.after(' ')
   return collapseWhitespace(doc.body?.textContent ?? '')
 }
 
+/** Decode entities in plain text without treating anything as markup ("The &lt;dialog&gt; element" stays intact). */
+export function decodeEntities(text: string): string {
+  if (!text.includes('&')) return collapseWhitespace(text)
+  const doc = new DOMParser().parseFromString(text.replaceAll('<', '&lt;'), 'text/html')
+  return collapseWhitespace(doc.body?.textContent ?? '')
+}
+
+/** Whitespace collapsed, and invisible characters (email preheader padding, soft hyphens) removed. */
 export function collapseWhitespace(text: string): string {
-  return text.replace(/\s+/g, ' ').trim()
+  return text
+    .replace(/\u034f|[\u00ad\u200b-\u200f\u2060\ufeff]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
 }
 
 /** Cut to about `max` characters on a word boundary, with an ellipsis. */
@@ -40,5 +51,5 @@ export function clampText(text: string, max: number): string {
   const cut = text.slice(0, max + 1)
   const lastSpace = cut.lastIndexOf(' ')
   const clipped = lastSpace > max * 0.6 ? cut.slice(0, lastSpace) : text.slice(0, max)
-  return clipped.replace(/[\s,;:.–—-]+$/, '') + '…'
+  return `${clipped.replace(/[\s,;:.–—-]+$/, '')}…`
 }

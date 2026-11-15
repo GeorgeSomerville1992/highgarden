@@ -9,6 +9,8 @@ export type FeedConfig = {
   kind?: 'newsletter'
   /** Drop items whose title ends with this, e.g. dictionary sub-entries. */
   collapseTitleSuffix?: string
+  /** Split long titles here: the rest becomes the summary ("This Week In React #305: X, Forms, …"). */
+  titleSummarySeparator?: string
   /** Keep only the newest N items from this feed. */
   maxItems?: number
   /** Keep at most N items per calendar day from this feed. */

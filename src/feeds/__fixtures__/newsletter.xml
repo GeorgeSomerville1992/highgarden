@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <feed xmlns="http://www.w3.org/2005/Atom">
+      <id>urn:kill-the-newsletter:testfeed</id>
+      <link rel="self" href="https://kill-the-newsletter.com/feeds/testfeed.xml" />
+      <updated>2026-11-14T09:00:00.000Z</updated>
+      <title>AI Hero</title>
+      <!-- Synthetic fixture in Kill the Newsletter's shape. Real feeds contain private tokens. -->
+
+          <entry>
+            <id>urn:kill-the-newsletter:entry-repeat</id>
+            <link rel="alternate" type="text/html" href="https://kill-the-newsletter.com/feeds/testfeed/entries/entry-repeat.html" />
+            <published>2026-11-13T09:00:00.000Z</published>
+            <updated>2026-11-13T09:00:00.000Z</updated>
+            <author><name>hello@example.com</name></author>
+            <title>The Home Repo Pattern</title>
+            <content type="html">&lt;html&gt;&lt;head&gt;&lt;style&gt;p { color: red }&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;span style="display:none"&gt;&#x34F; &#x200C; &#x34F; &#x200C;&lt;/span&gt;&lt;p&gt;Hey friend,&lt;/p&gt;&lt;p&gt;I wrote up a pattern I keep reaching for: &lt;a href="https://www.aihero.dev/the-home-repo-pattern?utm_source=newsletter"&gt;the home repo pattern&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.aihero.dev/"&gt;AI Hero&lt;/a&gt; · &lt;a href="https://www.aihero.dev/unsubscribe?t=fake-token"&gt;Unsubscribe&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</content>
+          </entry>
+
+          <entry>
+            <id>urn:kill-the-newsletter:entry-unique</id>
+            <link rel="alternate" type="text/html" href="https://kill-the-newsletter.com/feeds/testfeed/entries/entry-unique.html" />
+            <published>2026-11-12T09:00:00.000Z</published>
+            <updated>2026-11-12T09:00:00.000Z</updated>
+            <author><name>hello@example.com</name></author>
+            <title>Three things I learned shipping agents this week</title>
+            <content type="html">&lt;p&gt;Hey friend,&lt;/p&gt;&lt;p&gt;This week I shipped three agents to production and every one of them taught me something different about evals, retries and context windows. Read more at https://example.com/agents-in-production.&lt;/p&gt;&lt;p&gt;&lt;a href="https://example.com/agents-in-production"&gt;Read the write-up&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;a href="https://www.aihero.dev/confirm?t=fake-token"&gt;Confirm&lt;/a&gt; · &lt;a href="https://kill-the-newsletter.com/feeds/testfeed"&gt;Feed&lt;/a&gt;&lt;/p&gt;</content>
+          </entry>
+
+          <entry>
+            <id>urn:kill-the-newsletter:entry-short</id>
+            <link rel="alternate" type="text/html" href="https://kill-the-newsletter.com/feeds/testfeed/entries/entry-short.html" />
+            <published>2026-11-11T09:00:00.000Z</published>
+            <updated>2026-11-11T09:00:00.000Z</updated>
+            <author><name>hello@example.com</name></author>
+            <title>Confirm your email</title>
+            <content type="html">&lt;p&gt;&lt;a href="https://www.aihero.dev/confirm?t=fake-token"&gt;Confirm&lt;/a&gt;&lt;/p&gt;</content>
+          </entry>
+    </feed>

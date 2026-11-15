@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title><![CDATA[React Blog]]></title>
+        <description>Trimmed for tests</description>
+        <link>https://react.dev/</link>
+        <generator>react.dev rss module</generator>
+        <lastBuildDate>Wed, 11 Nov 2026 16:45:24 GMT</lastBuildDate>
+        <atom:link href="https://react.dev/rss.xml" rel="self" type="application/rss+xml"/>
+        <pubDate>Wed, 11 Nov 2026 16:45:24 GMT</pubDate>
+        <language><![CDATA[en]]></language>
+        <item>
+            <title><![CDATA[React 19.3]]></title>
+            <description><![CDATA[React 19.3 adds new features like View Transitions, Fragment Refs, browser(), Trusted Types, and more.]]></description>
+            <link>https://react.dev/blog/2026/09/09/react-19-3</link>
+            <guid isPermaLink="true">https://react.dev/blog/2026/09/09/react-19-3</guid>
+            <dc:creator><![CDATA[The React Team]]></dc:creator>
+            <pubDate>Wed, 09 Sep 2026 00:00:00 GMT</pubDate>
+        </item>
+<item>
+            <title><![CDATA[The React Foundation: A New Home for React Hosted by the Linux Foundation]]></title>
+            <description><![CDATA[The React Foundation has officially launched, hosted by the Linux Foundation.]]></description>
+            <link>https://react.dev/blog/2026/02/24/the-react-foundation</link>
+            <guid isPermaLink="true">https://react.dev/blog/2026/02/24/the-react-foundation</guid>
+            <dc:creator><![CDATA[Matt Carroll]]></dc:creator>
+            <pubDate>Tue, 24 Feb 2026 00:00:00 GMT</pubDate>
+        </item>
+<item>
+            <title><![CDATA[Denial of Service and Source Code Exposure in React Server Components]]></title>
+            <description><![CDATA[Security researchers have found and disclosed two additional vulnerabilities in React Server Components while attempting to exploit the patches in last week’s critical vulnerability. High vulnerability Denial of Service (CVE-2025-55184), and medium vulnerability Source Code Exposure (CVE-2025-55183)]]></description>
+            <link>https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components</link>
+            <guid isPermaLink="true">https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components</guid>
+            <dc:creator><![CDATA[The React Team]]></dc:creator>
+            <pubDate>Thu, 11 Dec 2025 00:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
