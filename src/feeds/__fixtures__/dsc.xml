@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:cc="http://cyber.law.harvard.edu/rss/creativeCommonsRssModule.html">
+    <channel>
+        <title><![CDATA[Design Systems Collective - Medium]]></title>
+        <description>Trimmed for tests</description>
+        <link>https://www.designsystemscollective.com?source=rss----dbd299f90c1d---4</link>
+        <image>
+            <url>https://cdn-images-1.medium.com/proxy/1*TGH72Nnw24QL3iV9IOm4VA.png</url>
+            <title>Design Systems Collective - Medium</title>
+            <link>https://www.designsystemscollective.com?source=rss----dbd299f90c1d---4</link>
+        </image>
+        <generator>Medium</generator>
+        <lastBuildDate>Sun, 15 Nov 2026 09:29:46 GMT</lastBuildDate>
+        <atom:link href="https://www.designsystemscollective.com/feed" rel="self" type="application/rss+xml"/>
+        <webMaster><![CDATA[yourfriends@medium.com]]></webMaster>
+        <atom:link href="http://medium.superfeedr.com" rel="hub"/>
+        <item>
+            <title><![CDATA[Component Kit Builder Dev Log #06]]></title>
+            <link>https://www.designsystemscollective.com/component-kit-builder-dev-log-06-3267637d43c0?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/3267637d43c0</guid>
+            <category><![CDATA[case-study]]></category>
+            <category><![CDATA[ux-design]]></category>
+            <category><![CDATA[design-systems]]></category>
+            <category><![CDATA[claude-code]]></category>
+            <category><![CDATA[ai]]></category>
+            <dc:creator><![CDATA[VyntaHQ]]></dc:creator>
+            <pubDate>Fri, 13 Nov 2026 14:23:02 GMT</pubDate>
+            <atom:updated>2026-11-13T14:23:00.213Z</atom:updated>
+            
+        </item>
+<item>
+            <title><![CDATA[Localisation is a design-system problem]]></title>
+            <link>https://www.designsystemscollective.com/localisation-is-a-design-system-problem-1d0a922d007d?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/1d0a922d007d</guid>
+            <category><![CDATA[ux-design]]></category>
+            <category><![CDATA[fintech]]></category>
+            <category><![CDATA[design-systems]]></category>
+            <category><![CDATA[product-design]]></category>
+            <category><![CDATA[localization]]></category>
+            <dc:creator><![CDATA[Fabusuyi Oluwatobi]]></dc:creator>
+            <pubDate>Fri, 13 Nov 2026 05:14:51 GMT</pubDate>
+            <atom:updated>2026-11-13T05:14:50.368Z</atom:updated>
+            
+        </item>
+<item>
+            <title><![CDATA[“No results.” Or just the wrong search? | The UX Bit]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://www.designsystemscollective.com/no-results-or-just-the-wrong-search-the-ux-bit-169ef02513ec?source=rss----dbd299f90c1d---4"><img src="https://cdn-images-1.medium.com/max/1536/1*eCMxu2wZJ3q4c_yuUJmn-Q.png" width="1536"></a></p><p class="medium-feed-snippet">Interaction Design Design Practice</p><p class="medium-feed-link"><a href="https://www.designsystemscollective.com/no-results-or-just-the-wrong-search-the-ux-bit-169ef02513ec?source=rss----dbd299f90c1d---4">Continue reading on Design Systems Collective »</a></p></div>]]></description>
+            <link>https://www.designsystemscollective.com/no-results-or-just-the-wrong-search-the-ux-bit-169ef02513ec?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/169ef02513ec</guid>
+            <category><![CDATA[product-design]]></category>
+            <category><![CDATA[ux]]></category>
+            <category><![CDATA[interaction-design]]></category>
+            <category><![CDATA[ui]]></category>
+            <dc:creator><![CDATA[The UX Bit]]></dc:creator>
+            <pubDate>Fri, 13 Nov 2026 05:13:21 GMT</pubDate>
+            <atom:updated>2026-11-13T05:13:19.945Z</atom:updated>
+        </item>
+<item>
+            <title><![CDATA[Three widths, two identical screenshots]]></title>
+            <link>https://www.designsystemscollective.com/three-widths-two-identical-screenshots-c4e09238bf3b?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/c4e09238bf3b</guid>
+            <category><![CDATA[responsive-design]]></category>
+            <category><![CDATA[storybook]]></category>
+            <category><![CDATA[frontend]]></category>
+            <category><![CDATA[engineering-design]]></category>
+            <category><![CDATA[design-systems]]></category>
+            <dc:creator><![CDATA[Sebastian Balderas Espinosa]]></dc:creator>
+            <pubDate>Thu, 12 Nov 2026 15:34:11 GMT</pubDate>
+            <atom:updated>2026-11-12T15:34:10.536Z</atom:updated>
+            
+        </item>
+<item>
+            <title><![CDATA[From base colour to Figma Variables: a practical colour system workflow]]></title>
+            <link>https://www.designsystemscollective.com/from-base-color-to-figma-variables-a-practical-color-system-workflow-ae03c8466057?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/ae03c8466057</guid>
+            <category><![CDATA[product-design]]></category>
+            <category><![CDATA[colors]]></category>
+            <category><![CDATA[ux]]></category>
+            <category><![CDATA[token-design]]></category>
+            <category><![CDATA[design-systems]]></category>
+            <dc:creator><![CDATA[Julia Gale]]></dc:creator>
+            <pubDate>Wed, 11 Nov 2026 17:05:14 GMT</pubDate>
+            <atom:updated>2026-11-11T17:05:12.747Z</atom:updated>
+            
+        </item>
+<item>
+            <title><![CDATA[The approve button needs an owner]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://www.designsystemscollective.com/the-approve-button-needs-an-owner-b5bc14f86996?source=rss----dbd299f90c1d---4"><img src="https://cdn-images-1.medium.com/max/1920/0*LfjovN0j9fjm3RwK.png" width="1920"></a></p><p class="medium-feed-snippet">October 2026 in review</p><p class="medium-feed-link"><a href="https://www.designsystemscollective.com/the-approve-button-needs-an-owner-b5bc14f86996?source=rss----dbd299f90c1d---4">Continue reading on Design Systems Collective »</a></p></div>]]></description>
+            <link>https://www.designsystemscollective.com/the-approve-button-needs-an-owner-b5bc14f86996?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/b5bc14f86996</guid>
+            <category><![CDATA[ai-agents-in-action]]></category>
+            <category><![CDATA[design-leadership]]></category>
+            <category><![CDATA[design-systems]]></category>
+            <category><![CDATA[governance]]></category>
+            <category><![CDATA[monthly-signals]]></category>
+            <dc:creator><![CDATA[Shane P Williams]]></dc:creator>
+            <pubDate>Tue, 10 Nov 2026 10:35:30 GMT</pubDate>
+            <atom:updated>2026-11-10T10:35:32.288Z</atom:updated>
+        </item>
+<item>
+            <title><![CDATA[Design Systems Are Not Neutral]]></title>
+            <description><![CDATA[<div class="medium-feed-item"><p class="medium-feed-image"><a href="https://www.designsystemscollective.com/design-systems-are-not-neutral-f38cd4f3b623?source=rss----dbd299f90c1d---4"><img src="https://cdn-images-1.medium.com/max/2600/1*yfKMA-34LJhfq4j75MN0Ww.jpeg" width="7680"></a></p><p class="medium-feed-snippet">Every Component Reflects a Product Decision</p><p class="medium-feed-link"><a href="https://www.designsystemscollective.com/design-systems-are-not-neutral-f38cd4f3b623?source=rss----dbd299f90c1d---4">Continue reading on Design Systems Collective »</a></p></div>]]></description>
+            <link>https://www.designsystemscollective.com/design-systems-are-not-neutral-f38cd4f3b623?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/f38cd4f3b623</guid>
+            <category><![CDATA[product-design]]></category>
+            <category><![CDATA[design-systems]]></category>
+            <category><![CDATA[design-thinking]]></category>
+            <category><![CDATA[user-experience]]></category>
+            <category><![CDATA[ux-design]]></category>
+            <dc:creator><![CDATA[Giancarlo Vitulano]]></dc:creator>
+            <pubDate>Tue, 10 Nov 2026 07:17:05 GMT</pubDate>
+            <atom:updated>2026-11-10T07:17:03.797Z</atom:updated>
+        </item>
+<item>
+            <title><![CDATA[The Most Expensive Part of UI Design Is Solving the Same Problem Twice]]></title>
+            <link>https://www.designsystemscollective.com/the-most-expensive-part-of-ui-design-is-solving-the-same-problem-twice-ce6f4f5c95e2?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/ce6f4f5c95e2</guid>
+            <category><![CDATA[product-design]]></category>
+            <category><![CDATA[design-operations]]></category>
+            <category><![CDATA[figma]]></category>
+            <category><![CDATA[design-systems]]></category>
+            <category><![CDATA[ui-design]]></category>
+            <dc:creator><![CDATA[Sowjanya Pichikala]]></dc:creator>
+            <pubDate>Tue, 10 Nov 2026 07:13:34 GMT</pubDate>
+            <atom:updated>2026-11-10T07:13:32.980Z</atom:updated>
+            
+        </item>
+<item>
+            <title><![CDATA[Our brand blue failed accessibility. The fix wasn’t a new blue.]]></title>
+            <link>https://www.designsystemscollective.com/our-brand-blue-failed-accessibility-the-fix-wasnt-a-new-blue-948c0ee34bf3?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/948c0ee34bf3</guid>
+            <category><![CDATA[color-system]]></category>
+            <category><![CDATA[ui-design]]></category>
+            <category><![CDATA[ux-design]]></category>
+            <category><![CDATA[design-systems]]></category>
+            <category><![CDATA[design]]></category>
+            <dc:creator><![CDATA[Ankit Kumar]]></dc:creator>
+            <pubDate>Tue, 10 Nov 2026 07:11:36 GMT</pubDate>
+            <atom:updated>2026-11-11T11:46:54.355Z</atom:updated>
+            
+        </item>
+<item>
+            <title><![CDATA[Creating an AI agent was the easy part. Writing the rules to keep it in check wasn’t.]]></title>
+            <link>https://www.designsystemscollective.com/creating-an-ai-agent-was-the-easy-part-writing-the-rules-to-keep-it-in-check-wasnt-ed4cc14926d2?source=rss----dbd299f90c1d---4</link>
+            <guid isPermaLink="false">https://medium.com/p/ed4cc14926d2</guid>
+            <category><![CDATA[case-study]]></category>
+            <category><![CDATA[ai-agent]]></category>
+            <category><![CDATA[design-systems]]></category>
+            <category><![CDATA[artificial-intelligence]]></category>
+            <category><![CDATA[ux-design]]></category>
+            <dc:creator><![CDATA[Matt Bailey]]></dc:creator>
+            <pubDate>Tue, 10 Nov 2026 07:00:16 GMT</pubDate>
+            <atom:updated>2026-11-10T07:00:15.548Z</atom:updated>
+            
+        </item>
+    </channel>
+</rss>

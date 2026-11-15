@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="xslsheet"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:podcast="https://podcastindex.org/namespace/1.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <atom:link rel="self" type="application/atom+xml" href="https://serve.podhome.fm/rss/c9abdd38-a5dc-5eb2-96fd-f833f93208a7" title="MP3 Audio" />
+    <atom:link rel="hub" href="https://pubsubhubbub.appspot.com/" />
+    <podcast:podping usesPodping="true" />
+    <podcast:podroll>
+      <podcast:remoteItem feedGuid="1c0357c0-6aba-5766-a2d5-2090d8dab6bc" feedUrl="https://feeds.fireside.fm/dataengineering/rss" />
+      <podcast:remoteItem feedGuid="0e91aeb8-10b7-54d0-8ded-d832dd2d857b" feedUrl="https://feeds.fireside.fm/pythonpodcast/rss" />
+    </podcast:podroll>
+    <image>
+      <url>https://assets.podhome.fm/f6ff0caa-931b-4c08-bfdd-08dc7f5cd336/638557211890591941ai_engineering_podcast_logo.jpg</url>
+      <title>AI Engineering Podcast</title>
+      <link>https://www.aiengineeringpodcast.com</link>
+    </image>
+    <podcast:image href="https://assets.podhome.fm/f6ff0caa-931b-4c08-bfdd-08dc7f5cd336/638557211890591941ai_engineering_podcast_logo.jpg" type="image/jpeg" alt="AI Engineering Podcast" />
+    <podcast:trailer pubdate="Fri, 3 Jun 2022 12:00:00 +0000" url="https://serve.podhome.fm/episode/f6ff0caa-931b-4c08-bfdd-08dc7f5cd336/638530538342328863734a1e90-cdeb-4cc8-8d3f-33473c81129e.mp3" length="977060" type="audio/mpeg">Introducing The Show</podcast:trailer>
+    <podcast:updateFrequency rrule="FREQ=MONTHLY;INTERVAL=5">Monthly</podcast:updateFrequency>
+    <podcast:medium>podcast</podcast:medium>
+    <title>AI Engineering Podcast</title>
+    <description>Trimmed for tests</description>
+    <link>https://www.aiengineeringpodcast.com</link>
+    <language>en</language>
+    <copyright><![CDATA[© 2024 Boundless Notions, LLC.]]></copyright>
+    <podcast:locked owner="hosts@aiengineeringpodcast.com">no</podcast:locked>
+    <podcast:guid>c9abdd38-a5dc-5eb2-96fd-f833f93208a7</podcast:guid>
+    <podcast:funding url="https://machinelearning.supercast.com/">Support the show!</podcast:funding>
+    <podcast:person role="Host" group="Cast" href="https://www.boundlessnotions.com" img="https://assets.podhome.fm/f6ff0caa-931b-4c08-bfdd-08dc7f5cd336/638557955481531561square.jpg">Tobias Macey</podcast:person>
+    <generator>Podhome (https://www.podhome.fm)</generator>
+    <managingEditor>hosts@aiengineeringpodcast.com</managingEditor>
+    <lastBuildDate>Thu, 15 Oct 2026 23:44:51 +0000</lastBuildDate>
+    <pubDate>Thu, 15 Oct 2026 23:44:51 +0000</pubDate>
+    <itunes:title>AI Engineering Podcast</itunes:title>
+    <itunes:image href="https://assets.podhome.fm/f6ff0caa-931b-4c08-bfdd-08dc7f5cd336/638557211890591941ai_engineering_podcast_logo.jpg" />
+    <itunes:new-feed-url>https://serve.podhome.fm/rss/c9abdd38-a5dc-5eb2-96fd-f833f93208a7</itunes:new-feed-url>
+    <itunes:author>Tobias Macey</itunes:author>
+    <itunes:owner>
+      <itunes:name>Tobias Macey</itunes:name>
+      <itunes:email>hosts@aiengineeringpodcast.com</itunes:email>
+    </itunes:owner>
+    <itunes:explicit>false</itunes:explicit>
+    <itunes:category text="Technology" />
+    <itunes:category text="Education" />
+    <itunes:type>episodic</itunes:type>
+    <item>
+      <title>What Do Humans Do Now? Rethinking Software Engineering in the Age of AI Agents</title>
+      <description><![CDATA[Summary&nbsp;<br />In this episode, I spoke with Jonathan Ellis about how AI agents are changing the economics of software development and forcing teams to rethink where human time is best spent. We explored his argument that, now that code generation is dramatically faster, traditional human-centered code review is becoming a poor use of attention. Instead, Jonathan makes the case for shifting review earlier in the lifecycle toward specifications, RFCs, and architecture decisions, while investing more heavily in automated validation, static analysis, fuzzing, and other quality gates that can help verify whether software does what it is supposed to do regardless of how the code was written.&nbsp;<br />Jonathan also shared lessons from building Brokk AI’s tooling, including Bifrost for fast, agent-friendly static analysis and Mjolnir for coordinating multiple coding agents across harnesses and subscriptions. We discussed the emerging need for better agent-oriented collaboration systems, the risks of blindly outsourcing judgment to AI, and the challenge of training newer engineers in a world where agents can do much of the implementation work. Overall, this conversation examines what remains uniquely valuable for humans as agents take over more of the mechanics of software delivery: setting goals, making product and design decisions, building better feedback loops, and deciding what is worth building in the first place.&nbsp;<br /><br /><br />Announcements&nbsp;<br /><ul><li>Hello and welcome to the AI Engineering Podcast, your guide to the fast-moving world of building scalable and maintainable AI systems</li><li>Your host is Tobias Macey and today I'm interviewing Jonathan Ellis about how to make the best use of human time when using agents to build software</li></ul><br />Interview<br />&nbsp;<br /><ul><li>Introduction</li><li>How did you get involved in machine learning?</li><li>Agentic coding has become much more viable this year, which dramatically shifts the bottlenecks in software delivery. What are the ways that you are seeing that impact engineering teams?</li><li>As an industry we have built up numerous expectations and "best practices" around the software lifecycle, with many assumptions about the need for human review before sending code into production. How are you seeing those expectations impact teams who have shifted to agentic coding?</li><li>Advanced teams have been working toward removing the human bottleneck in the validation and deployment path for several years now. What are the lessons that we can all learn from them?</li><li>What are the new tools or practices that we need to build or adopt to gain the confidence that we need to deploy AI-written code to end-users?</li><li>What are the highest leverage points of the software lifecycle that we can focus our limited human attention and review processes?</li><li>What are you building that helps us work with agents to produce better software and build confidence in it?</li><li>What lessons can we learn from the changes happening in software engineering that we can apply to the design and development of other agentic workflows?</li><li>What are the most interesting, innovative, or unexpected ways that you have seen Bifrost/Mjolnir/etc. used?</li><li>What are the most interesting, unexpected, or challenging lessons that you have learned while working on tools for agentic software engineering?</li><li>When is the Brokk suite the wrong choice?</li><li>What do you have planned for the future of Bifrost/Mjolnir/etc.?</li></ul><br />Contact Info<br />&nbsp;<br /><ul><li><a href="https://www.linkedin.com/in/jbellis/" target="_blank">LinkedIn</a></li></ul><br />Parting Question<br />&nbsp;<br /><ul><li>From your perspective, what are the biggest gaps in tooling, technology, or training for AI systems today?</li></ul><br />Closing Announcements<br />&nbsp;<br /><ul><li>Thank you for listening! Don't forget to check out our other shows. The <a href="https://www.dataengineeringpodcast.com" target="_blank">Data Engineering Podcast</a> covers the latest on modern data management. <a href="https://www.pythonpodcast.com" target="_blank">Podcast.__init__</a> covers the Python language, its community, and the innovative ways it is being used.</li><li>Visit the <a href="https://www.aiengineeringpodcast.com" target="_blank">site</a> to subscribe to the show, sign up for the mailing list, and read the show notes.</li><li>If you've learned something or tried out a project from the show then tell us about it! Email hosts@aiengineeringpodcast.com with your story.</li><li>To help other people find the show please leave a review on <a href="https://podcasts.apple.com/us/podcast/the-machine-learning-podcast/id1626358243" target="_blank">iTunes</a> and tell your friends and co-workers.</li></ul><br />Links<br />&nbsp;<br /><ul><li><a href="https://bifrost.brokk.ai/" target="_blank">Bifrost</a></li><li><a href="https://mjolnir.brokk.ai/" target="_blank">Mjolnir</a></li><li><a href="https://blog.brokk.ai/its-time-to-rip-off-the-band-aid-and-stop-performing-code-reviews/" target="_blank">Stop Doing Code Review Blog Post</a></li><li><a href="https://slopcop.com/" target="_blank">SlopCop</a></li><li><a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ</a></li><li><a href="https://adr.github.io/" target="_blank">ADR == Architecture Decision Record</a></li><li><a href="https://en.wikipedia.org/wiki/Request_for_Comments" target="_blank">RFC == Request for Comments</a></li><li><a href="https://witan-context.readthedocs.io/" target="_blank">Witan Context</a> - Agent-native memory, tasks, and projects (built by Tobias)</li><li><a href="https://en.wikipedia.org/wiki/Coverity" target="_blank">Coverity</a></li><li><a href="https://en.wikipedia.org/wiki/Fuzzing" target="_blank">Fuzz Testing</a></li><li><a href="https://cassandra.apache.org/_/index.html" target="_blank">Apache Cassandra</a></li><li><a href="https://agentskills.io/home" target="_blank">Agent Skills</a></li><li><a href="https://developers.openai.com/cookbook/articles/codex_exec_plans" target="_blank">OpenAI Article - Using Exec Plans To Drive Agents For Longer Tasks</a></li><li><a href="https://vectorize.io/" target="_blank">Vectorize</a><br />&nbsp;<ul><li><a href="https://hindsight.vectorize.io/" target="_blank">Hindsight</a></li></ul></li><li>&nbsp;</li><li><a href="https://www.swebench.com/" target="_blank">SWE-Bench</a></li><li><a href="https://deepswe.datacurve.ai/" target="_blank">Deep-SWE</a></li><li><a href="https://cursor.com/cursorbench" target="_blank">Cursor Bench</a></li></ul><br />The intro and outro music is from <a href="https://freemusicarchive.org/music/The_Freak_Fandango_Orchestra/Tales_Of_A_Dead_Fish/Hitmans_Lovesong/" target="_blank">Hitman's Lovesong feat. Paola Graziano</a> by <a href="http://freemusicarchive.org/music/The_Freak_Fandango_Orchestra/" target="_blank">The Freak Fandango Orchestra</a>/<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA 3.0</a>]]></description>
+      <guid isPermaLink="false">cbed4fc8-6df2-48d5-9073-bd25792c5a73</guid>
+      <link>https://www.aiengineeringpodcast.com/agentic-software-engineering-human-judgement-episode-81</link>
+      <pubDate>Thu, 15 Oct 2026 23:44:20 +0000</pubDate>
+      
+      
+      
+      <itunes:image href="https://assets.podhome.fm/f6ff0caa-931b-4c08-bfdd-08dc7f5cd336/638557211890591941ai_engineering_podcast_logo.jpg" />
+      
+      <itunes:duration>01:07:35</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:title>What Do Humans Do Now? Rethinking Software Engineering in the Age of AI Agents</itunes:title>
+      <itunes:author>Tobias Macey</itunes:author>
+      <itunes:episode>81</itunes:episode>
+      
+      <itunes:episodeType>Full</itunes:episodeType>
+      <enclosure url="https://op3.dev/e/dts.podtrac.com/redirect.mp3/serve.podhome.fm/episode/f6ff0caa-931b-4c08-bfdd-08dc7f5cd336/639276278041101179cbed4fc8-6df2-48d5-9073-bd25792c5a73.mp3" length="64884491" type="audio/mpeg" />
+      
+      
+      
+      
+      
+      
+    </item>
+<item>
+      <title>How to Evaluate RAG Systems When Ground Truth Keeps Changing</title>
+      <description><![CDATA[Summary&nbsp;<br />In this episode Ofer Mendelevitch shares what it really takes to evaluate RAG systems in production when your source data is incomplete, constantly changing, or difficult to validate against a clean ground truth. He explores how RAG has evolved from simple “chat with your PDF” demos into enterprise-grade retrieval systems that require robust ingestion pipelines, hybrid search, reranking, multimodal support, access controls, and refresh strategies for large and dynamic document collections. Ofer also explains why evaluation becomes one of the hardest parts of the stack, particularly when retrieval quality, generation quality, and system behavior can all shift as you change chunking, models, prompts, or ranking components.&nbsp;<br />He digs into practical approaches for offline and online evaluation, including synthetic question generation, sampling production traffic, and LLM-as-a-judge techniques such as UMBRELA and Auto Nuggetizer. Along the way, he discusses the rise of agentic RAG, context engineering, MCP-connected tools, text-to-SQL systems, and the growing role of coding agents in building and maintaining AI pipelines. Ofer closes with his perspective on where retrieval, memory, multimodal systems, and agent orchestration are headed next, along with a reminder that the biggest gaps in AI today are often not just technical, but educational and organizational as well.&nbsp;<br />Announcements&nbsp;<br /><ul><li>Hello and welcome to the AI Engineering Podcast, your guide to the fast-moving world of building scalable and maintainable AI systems</li><li>Your host is Tobias Macey and today I'm interviewing Ofer Mendelevitch about how to evaluate your RAG systems when you have incomplete or changing data to grade against</li></ul>Interview<br /><ul><li>Introduction</li><li>How did you get involved in machine learning?</li><li>RAG was one of the first concepts to gain traction in the early explosion of LLMs and their application to real-world problems. How would you characterize its role in the current landscape?</li><li>RAG is conceptually straight-forward, but can be quite complex to do well. What are some of the common pitfalls that teams encounter when bringing a retrieval-oriented LLM service into production?</li><li>What are some of the predominant methods to avoid regressions or increased error rates as the data, code, and models change in a given deployment?<ul><li>There are numerous software projects and companies that offer various forms of evaluation/validation for RAG workloads. What are the factors that teams should be evaluating when selecting which one(s) to adopt?</li></ul></li><li>Especially when working with data that is subject to change (user-contributed content, changing products, news-based data, etc.), what are the techniques that teams can use to be sure that the generated responses based on that information is accurate?</li><li>As models have become more powerful the idea of "agentic RAG" started circulating. How is that different from the first iteration of RAG systems?<ul><li>What new pressures and challenges does that prevent?</li><li>What are the ways that it can improve or simplify a content-based generative system?</li></ul></li><li>How do you think about the differentiation of RAG and "context engineering"?&nbsp;</li><li>What are the most interesting, innovative, or unexpected ways that you have seen teams address the production needs of RAG systems?</li><li>What are the most interesting, unexpected, or challenging lessons that you have learned while working on RAG evaluation?</li><li>How do you see the future of RAG, context engineering, and data-driven agents changing in the near to medium term?</li></ul><br />Contact Info<br /><ul><li><a href="https://www.linkedin.com/in/ofermend/" target="_blank">LinkedIn</a></li></ul><br />Parting Question<br /><ul><li>From your perspective, what are the biggest gaps in tooling, technology, or training for AI systems today?</li></ul><br />Links<br /><ul><li><a href="https://scikit-learn.org/stable/modules/naive_bayes.html" target="_blank">Naive Bayes</a></li><li><a href="https://link.amazon/B0eh6oc0g" target="_blank">Hands on RAG for Production</a> (affiliate link)</li><li><a href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation" target="_blank">RAG == Retrieval Augmented Generation</a></li><li><a href="https://www.vectara.com/" target="_blank">Vectara</a></li><li><a href="https://www.phoenixdata.ai/glossary/hybrid-search" target="_blank">Hybrid Search</a></li><li><a href="https://en.wikipedia.org/wiki/Tf%E2%80%93idf" target="_blank">TF-IDF == Term-Frequency Inverse Document Frequency</a></li><li><a href="https://en.wikipedia.org/wiki/Okapi_BM25" target="_blank">BM25</a></li><li><a href="https://arxiv.org/pdf/2406.06519" target="_blank">UMBRELA</a></li><li><a href="https://arxiv.org/html/2504.15068v1" target="_blank">AutoNuggetizer</a></li><li><a href="https://www.ibm.com/think/topics/agentic-rag" target="_blank">Agentic RAG</a></li><li><a href="https://www.ibm.com/think/topics/agentic-rag" target="_blank">Malloy</a></li></ul><br />The intro and outro music is from <a href="https://freemusicarchive.org/music/The_Freak_Fandango_Orchestra/Tales_Of_A_Dead_Fish/Hitmans_Lovesong/" target="_blank">Hitman's Lovesong feat. Paola Graziano</a> by <a href="http://freemusicarchive.org/music/The_Freak_Fandango_Orchestra/" target="_blank">The Freak Fandango Orchestra</a>/<a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank">CC BY-SA 3.0</a>]]></description>
+      <guid isPermaLink="false">e0852786-5c11-4d9f-a3eb-edf7580bbf17</guid>
+      <link>https://www.aiengineeringpodcast.com/rag-evaluation-with-sparse-data-episode-80</link>
+      <pubDate>Wed, 7 Oct 2026 00:15:12 +0000</pubDate>
+      
+      
+      
+      <itunes:image href="https://assets.podhome.fm/f6ff0caa-931b-4c08-bfdd-08dc7f5cd336/638557211890591941ai_engineering_podcast_logo.jpg" />
+      
+      <itunes:duration>01:02:31</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+      <itunes:title>How to Evaluate RAG Systems When Ground Truth Keeps Changing</itunes:title>
+      <itunes:author>Tobias Macey</itunes:author>
+      <itunes:episode>80</itunes:episode>
+      
+      <itunes:episodeType>Full</itunes:episodeType>
+      <enclosure url="https://op3.dev/e/dts.podtrac.com/redirect.mp3/serve.podhome.fm/episode/f6ff0caa-931b-4c08-bfdd-08dc7f5cd336/639269265437119038e0852786-5c11-4d9f-a3eb-edf7580bbf17.mp3" length="60020282" type="audio/mpeg" />
+      
+      
+      
+      
+      
+      
+    </item>
+  </channel>
+</rss>

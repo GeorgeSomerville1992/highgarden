@@ -1,0 +1,29 @@
+.page {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 40px 64px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: var(--grid-columns);
+  gap: 24px;
+  align-items: start;
+}
+
+@media (max-width: 600px) {
+  .page {
+    padding: 24px 16px 48px;
+    gap: 24px;
+  }
+}

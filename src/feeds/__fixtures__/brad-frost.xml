@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet href="pretty-atom-feed.xsl" type="text/xsl"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US">
+  <title>Brad Frost</title>
+  <subtitle>Web Designer, Teacher, Consultant, Writer, Musician, Artist</subtitle>
+  <link href="https://bradfrost.com/feed/feed.xml" rel="self" />
+  <link href="https://bradfrost.com/" />
+  <updated>2026-11-05T00:00:00Z</updated>
+  <id>https://bradfrost.com/</id>
+  <author>
+    <name>Brad Frost</name>
+  </author>
+  <entry>
+    <title>In Your Face - Meeting reminder app for Mac, Windows, iPhone, and iPad | In Your Face</title>
+    <link href="https://bradfrost.com/links/post/in-your-face-meeting-reminder-app-for-mac-windows-iphone-and-ipad-in-your-face/" />
+    <updated>2026-11-05T00:00:00Z</updated>
+    <id>https://bradfrost.com/links/post/in-your-face-meeting-reminder-app-for-mac-windows-iphone-and-ipad-in-your-face/</id>
+    <content type="html">&lt;p&gt;Full post body&lt;/p&gt;</content>
+  </entry>
+<entry>
+    <title>Playing My World: Helsinki Cathedral</title>
+    <link href="https://bradfrost.com/blog/post/playing-my-world-helsinki-cathedral/" />
+    <updated>2026-10-28T00:00:00Z</updated>
+    <id>https://bradfrost.com/blog/post/playing-my-world-helsinki-cathedral/</id>
+    <content type="html">&lt;p&gt;Full post body&lt;/p&gt;</content>
+  </entry>
+</feed>

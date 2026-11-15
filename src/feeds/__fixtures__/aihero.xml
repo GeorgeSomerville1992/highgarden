@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>AI Hero RSS Feed</title>
+        <link>https://www.aihero.dev</link>
+        <description>Trimmed for tests</description>
+        <lastBuildDate>Thu, 12 Nov 2026 11:17:27 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
+        <copyright>Copyright © 2026 Matt Pocock</copyright>
+        <atom:link href="https://www.aihero.dev/rss.xml" rel="self" type="application/rss+xml"/>
+        <item>
+            <title><![CDATA[AI Coding Dictionary]]></title>
+            <link>https://www.aihero.dev/ai-coding-dictionary</link>
+            <guid>https://www.aihero.dev/ai-coding-dictionary</guid>
+            <pubDate>Thu, 12 Nov 2026 11:10:20 GMT</pubDate>
+            <description><![CDATA[The vocabulary of AI coding, translated into plain English for engineers.]]></description>
+        </item>
+<item>
+            <title><![CDATA[AI | AI Coding Dictionary]]></title>
+            <link>https://www.aihero.dev/ai-coding-dictionary/ai</link>
+            <guid>https://www.aihero.dev/ai-coding-dictionary/ai</guid>
+            <pubDate>Thu, 12 Nov 2026 11:10:20 GMT</pubDate>
+            <description><![CDATA[A moving label, not a technology. Points at whatever computers can newly, impressively do — right now, large language models.]]></description>
+        </item>
+<item>
+            <title><![CDATA[Model | AI Coding Dictionary]]></title>
+            <link>https://www.aihero.dev/ai-coding-dictionary/model</link>
+            <guid>https://www.aihero.dev/ai-coding-dictionary/model</guid>
+            <pubDate>Thu, 12 Nov 2026 11:10:20 GMT</pubDate>
+            <description><![CDATA[The parameters. Stateless — does next-token prediction and nothing else. Cannot do anything agentic on its own.]]></description>
+        </item>
+<item>
+            <title><![CDATA[AI Hero Newsletter by Matt Pocock]]></title>
+            <link>https://www.aihero.dev/newsletter</link>
+            <guid>https://www.aihero.dev/newsletter</guid>
+            <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[Subscribe to be the first to learn about AI Hero releases, updates, and special discounts for AI Heroes.]]></description>
+        </item>
+<item>
+            <title><![CDATA[AI Skills for Real Engineers]]></title>
+            <link>https://www.aihero.dev/skills</link>
+            <guid>https://www.aihero.dev/skills</guid>
+            <pubDate>Sat, 16 May 2026 00:00:00 GMT</pubDate>
+            <description><![CDATA[A practical skill system for engineers who want to use AI without giving up their standards.]]></description>
+        </item>
+    </channel>
+</rss>
