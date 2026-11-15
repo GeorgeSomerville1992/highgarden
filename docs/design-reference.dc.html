@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Learning feed start page</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
+<style>
+body{margin:0}
+a{color:inherit;text-decoration:none}
+a:hover{text-decoration:underline;text-underline-offset:3px}
+button{font:inherit;cursor:pointer}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: {{t.bg}}; color: {{t.ink}}; font-family: Inter, system-ui, sans-serif; font-size: 15px; line-height: 1.5">
+<div style="max-width: 1440px; margin: 0 auto; padding: 40px 40px 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px">
+
+<header style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: {{t.muted}}">Sunday 15 November</p>
+<h1 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 40px; line-height: 1.1; font-weight: 600; letter-spacing: -0.02em">Good morning, George</h1>
+</div>
+<div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap">
+<span style="font-size: 13px; color: {{t.muted}}">Feeds checked 08:43</span>
+<button type="button" style="height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid {{t.line}}; background: {{t.surface}}; color: {{t.ink}}; font-size: 14px; font-weight: 500; display: inline-flex; align-items: center; gap: 8px">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-2.64-6.36"></path><path d="M21 3v6h-6"></path></svg>
+Refresh
+</button>
+<button type="button" style="height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid {{t.ink}}; background: {{t.ink}}; color: {{t.bg}}; font-size: 14px; font-weight: 600">Mark all as read</button>
+</div>
+</header>
+
+<section aria-label="New articles summary" style="display: flex; flex-direction: column; gap: 16px">
+<div style="background: {{t.ink}}; color: {{t.bg}}; border-radius: 16px; padding: 24px 32px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px 32px; box-sizing: border-box">
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap">
+<span style="font-family: 'Space Grotesk', Inter, sans-serif; font-size: 64px; line-height: 1; font-weight: 700; letter-spacing: -0.03em">{{totalNew}}</span>
+<div style="display: flex; flex-direction: column; gap: 2px">
+<p style="margin: 0; font-size: 13px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8">New since last visit</p>
+<p style="margin: 0; font-size: 20px; line-height: 1.3; font-weight: 500">new articles across your feeds since Sun 8 Nov</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 14px; opacity: 0.8">Last visit: Sunday 8 November</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px">
+<sc-for list="{{columns}}" as="col" hint-placeholder-count="3">
+<div style="background: {{t.surface}}; border: 1px solid {{t.line}}; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px; min-height: 148px; box-sizing: border-box">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<p style="margin: 0; font-size: 14px; font-weight: 600">{{col.name}}</p>
+<span style="width: 10px; height: 10px; border-radius: 50%; background: {{col.accent}}" aria-hidden="true"></span>
+</div>
+<div style="display: flex; align-items: baseline; gap: 8px">
+<span style="font-family: 'Space Grotesk', Inter, sans-serif; font-size: 40px; line-height: 1; font-weight: 700; color: {{col.accent}}">{{col.newCount}}</span>
+<span style="font-size: 14px; color: {{t.muted}}">new</span>
+</div>
+<p style="margin: 0; font-size: 13px; line-height: 1.4; color: {{t.muted}}">{{col.breakdown}}</p>
+</div>
+</sc-for>
+<div aria-hidden="true"></div>
+</div>
+</section>
+
+<main style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 24px; align-items: start">
+<sc-for list="{{columns}}" as="col" hint-placeholder-count="3">
+<section aria-label="{{col.name}}" style="background: {{t.surface}}; border: 1px solid {{t.line}}; border-radius: 16px; overflow: hidden">
+<div style="padding: 20px 20px 16px; border-bottom: 1px solid {{t.line}}; display: flex; flex-direction: column; gap: 10px">
+<div style="height: 4px; width: 40px; border-radius: 2px; background: {{col.accent}}" aria-hidden="true"></div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<h2 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 20px; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em">{{col.name}}</h2>
+<span style="font-size: 12px; font-weight: 600; padding: 3px 10px; border-radius: 999px; background: {{col.accent}}; color: {{t.onAccent}}">{{col.newCount}} new</span>
+</div>
+<p style="margin: 0; font-size: 12px; line-height: 1.4; color: {{t.muted}}">{{col.sources}}</p>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0">
+<sc-for list="{{col.items}}" as="item" hint-placeholder-count="5">
+<li>
+<sc-if value="{{item.divider}}" hint-placeholder-val="{{ false }}">
+<div style="padding: 10px 20px; background: {{t.sunk}}; border-top: 1px solid {{t.line}}; font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: {{t.muted}}">Earlier</div>
+</sc-if>
+<article style="padding: 16px 20px; border-top: 1px solid {{t.line}}; display: flex; flex-direction: column; gap: 6px">
+<div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 12px">
+<sc-if value="{{item.isNew}}" hint-placeholder-val="{{ false }}">
+<span style="font-weight: 700; letter-spacing: 0.06em; padding: 1px 7px; border-radius: 4px; background: {{col.accent}}; color: {{t.onAccent}}">NEW</span>
+</sc-if>
+<span style="font-weight: 600; color: {{t.ink}}">{{item.source}}</span>
+<span style="color: {{t.muted}}" aria-hidden="true">·</span>
+<time style="color: {{t.muted}}">{{item.when}}</time>
+</div>
+<h3 style="margin: 0; font-size: 16px; line-height: 1.35; font-weight: 600"><a href="{{item.url}}">{{item.title}}</a></h3>
+<sc-if value="{{item.summary}}" hint-placeholder-val="{{ true }}">
+<p style="margin: 0; font-size: 14px; line-height: 1.45; color: {{t.muted}}">{{item.summary}}</p>
+</sc-if>
+</article>
+</li>
+</sc-for>
+</ol>
+<sc-if value="{{col.footnote}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0; padding: 14px 20px; border-top: 1px solid {{t.line}}; background: {{t.sunk}}; font-size: 12px; line-height: 1.45; color: {{t.muted}}">{{col.footnote}}</p>
+</sc-if>
+</section>
+</sc-for>
+
+<section aria-label="Column 4" style="border: 2px dashed {{t.line}}; border-radius: 16px; padding: 32px 24px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; text-align: center; min-height: 320px; box-sizing: border-box">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true" style="color: {{t.muted}}"><path d="M12 5v14"></path><path d="M5 12h14"></path></svg>
+<h2 style="margin: 0; font-family: 'Space Grotesk', Inter, sans-serif; font-size: 18px; font-weight: 600">Column 4</h2>
+<p style="margin: 0; font-size: 14px; color: {{t.muted}}; max-width: 220px">Space for your fourth set of feeds</p>
+<button type="button" style="height: 44px; padding: 0 18px; border-radius: 10px; border: 1px solid {{t.line}}; background: {{t.surface}}; color: {{t.ink}}; font-size: 14px; font-weight: 500">Add feeds</button>
+</section>
+</main>
+
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"dark":{"editor":"boolean","default":false},"$preview":{"width":1440,"height":1960}}'>
+class Component extends DCLogic {
+  renderVals() {
+    var dark = this.props.dark ?? false;
+    var t = dark
+      ? { bg: '#121212', surface: '#1C1C1C', sunk: '#171717', ink: '#EDEDEA', muted: '#A6A5A0', line: '#2E2E2C', onAccent: '#121212' }
+      : { bg: '#F4F3EF', surface: '#FFFFFF', sunk: '#FAF9F6', ink: '#1A1A18', muted: '#5C5B56', line: '#E4E2DB', onAccent: '#FFFFFF' };
+    var accent = dark
+      ? { ai: '#B3A4FF', react: '#5CC8E0', css: '#FDA165' }
+      : { ai: '#5B3FD9', react: '#0A6A8A', css: '#B13F0B' };
+
+    var today = Date.UTC(2026, 10, 15);
+    var lastVisit = Date.UTC(2026, 10, 8);
+    var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    function when(iso) {
+      var d = new Date(iso + 'T00:00:00Z');
+      var days = Math.round((today - d.getTime()) / 86400000);
+      var date = d.getUTCDate() + ' ' + months[d.getUTCMonth()] + (d.getUTCFullYear() !== 2026 ? ' ' + d.getUTCFullYear() : '');
+      var rel = days === 0 ? 'Today' : days === 1 ? 'Yesterday' : days < 7 ? days + ' days ago' : days < 14 ? 'Last week' : null;
+      return rel ? rel + ' · ' + date : date;
+    }
+    function build(items) {
+      items.sort(function (a, b) { return a.date < b.date ? 1 : a.date > b.date ? -1 : 0; });
+      var seenOld = false;
+      return items.map(function (it, i) {
+        var isNew = new Date(it.date + 'T00:00:00Z').getTime() > lastVisit;
+        var divider = !isNew && !seenOld && i > 0;
+        if (!isNew) seenOld = true;
+        return { source: it.source, title: it.title, url: it.url, summary: it.summary || '', isNew: isNew, divider: divider, when: when(it.date) };
+      });
+    }
+    function count(items) { return items.filter(function (i) { return i.isNew; }).length; }
+    function breakdown(items) {
+      var m = {};
+      items.forEach(function (i) { if (i.isNew) m[i.source] = (m[i.source] || 0) + 1; });
+      var parts = Object.keys(m).map(function (k) { return k + ' ' + m[k]; });
+      return parts.length ? parts.join(' · ') : 'Nothing new';
+    }
+
+    var ai = build([
+      { source: 'AI Hero', date: '2026-11-12', title: 'The Home Repo Pattern', url: 'https://www.aihero.dev/the-home-repo-pattern' },
+      { source: 'AI Hero', date: '2026-11-12', title: 'AI Coding Dictionary', url: 'https://www.aihero.dev/ai-coding-dictionary', summary: 'A new glossary of AI coding terms, from model to parameters.' },
+      { source: 'AI Hero', date: '2026-11-06', title: 'AI SDK v6 Crash Course', url: 'https://www.aihero.dev/' },
+      { source: 'AI Engineering Podcast', date: '2026-10-15', title: 'What Do Humans Do Now? Rethinking Software Engineering in the Age of AI Agents', url: 'https://www.aiengineeringpodcast.com/episodepage/what-do-humans-do-now-rethinking-software-engineering-in-the-age-of-ai-agents', summary: 'E81 · Jonathan Ellis on how agents change the economics of software development.' },
+      { source: 'AI Engineering Podcast', date: '2026-10-07', title: 'How to Evaluate RAG Systems When Ground Truth Keeps Changing', url: 'https://www.aiengineeringpodcast.com/episodepage/how-to-evaluate-rag-systems-when-ground-truth-keeps-changing', summary: 'E80 · Evaluating production RAG when source data is incomplete or shifting.' },
+      { source: 'AI Engineering Podcast', date: '2026-09-19', title: 'Harness Engineering for Reliable, Governed AI Agents', url: 'https://www.aiengineeringpodcast.com/episodepage/harness-engineering-for-reliable-governed-ai-agents', summary: 'E79 · Memory, tools and sandboxed execution as the agent harness.' }
+    ]);
+    var react = build([
+      { source: 'This Week In React', date: '2026-11-11', title: 'This Week In React #305', url: 'https://thisweekinreact.com/newsletter/305', summary: "X's rebuilt app on streaming SSR and Relay, Discord moves off React Native, Expo previews Exact." },
+      { source: 'This Week In React', date: '2026-11-04', title: 'This Week In React #304', url: 'https://thisweekinreact.com/newsletter/304', summary: 'React Native 0.89 RC, Vega OS 2.0, and pull_request_target restricted by default.' },
+      { source: 'React Blog', date: '2026-09-09', title: 'React 19.3', url: 'https://react.dev/blog/2026/09/09/react-19-3', summary: 'View Transitions, Fragment Refs, Trusted Types support and more.' },
+      { source: 'Storybook', date: '2026-08-31', title: 'How to document your design system: best practices & tools', url: 'https://storybook.js.org/blog/how-to-document-your-design-system-best-practices-tools/' },
+      { source: 'Storybook', date: '2026-08-31', title: 'Component testing: a practical guide for frontend developers', url: 'https://storybook.js.org/blog/component-testing-a-practical-guide-for-frontend-developers/' },
+      { source: 'Storybook', date: '2026-06-16', title: 'Storybook for TanStack React', url: 'https://storybook.js.org/blog/storybook-for-tanstack-react/', summary: 'First-class support for TanStack Router, Start and Query.' }
+    ]);
+    var css = build([
+      { source: 'Design Systems Collective', date: '2026-11-13', title: 'Component Kit Builder Dev Log #06', url: 'https://www.designsystemscollective.com/component-kit-builder-dev-log-06-3267637d43c0' },
+      { source: 'Design Systems Collective', date: '2026-11-13', title: 'Localisation is a design-system problem', url: 'https://www.designsystemscollective.com/localisation-is-a-design-system-problem-1d0a922d007d' },
+      { source: 'Design Systems Collective', date: '2026-11-13', title: '“No results.” Or just the wrong search?', url: 'https://www.designsystemscollective.com/no-results-or-just-the-wrong-search-the-ux-bit-169ef02513ec' },
+      { source: 'Design Systems Collective', date: '2026-11-12', title: 'Three widths, two identical screenshots', url: 'https://www.designsystemscollective.com/three-widths-two-identical-screenshots-c4e09238bf3b' },
+      { source: 'Ahmad Shadeed', date: '2026-11-05', title: 'Beyond the viewport: Introducing Site Seeing', url: 'https://ishadeed.com/article/beyond-the-viewport/' },
+      { source: 'Brad Frost', date: '2026-11-05', title: 'In Your Face: meeting reminder app', url: 'https://bradfrost.com/links/post/in-your-face-meeting-reminder-app-for-mac-windows-iphone-and-ipad-in-your-face/' },
+      { source: 'Brad Frost', date: '2026-10-28', title: 'Playing My World: Helsinki Cathedral', url: 'https://bradfrost.com/blog/post/playing-my-world-helsinki-cathedral/' },
+      { source: 'Ahmad Shadeed', date: '2026-10-15', title: 'Fit height to background pattern size with calc-size()', url: 'https://ishadeed.com/article/fit-height-background-pattern-calc-size/' },
+      { source: 'Ahmad Shadeed', date: '2026-09-24', title: 'Detect when elements overlap with CSS', url: 'https://ishadeed.com/article/css-detect-overlap/' },
+      { source: 'EightShapes', date: '2024-03-11', title: 'Adopting Design System Generations', url: 'https://medium.com/eightshapes-llc/adopting-design-system-generations-900535442a16', summary: 'Nathan Curtis' }
+    ]);
+
+    var columns = [
+      { name: 'AI Engineering', accent: accent.ai, items: ai, sources: 'AI Hero · AI Hero newsletter · AI Engineering Podcast', footnote: 'AI Hero newsletter is connected. Issues will appear here once they start arriving.' },
+      { name: 'React & Frontend', accent: accent.react, items: react, sources: 'This Week In React · React Blog · Storybook · Frontend Mentor newsletter', footnote: 'Frontend Mentor newsletter is connected. Issues will appear here once they start arriving.' },
+      { name: 'CSS & Design Systems', accent: accent.css, items: css, sources: 'Brad Frost · EightShapes · Design Systems Collective · Ahmad Shadeed', footnote: '' }
+    ];
+    columns.forEach(function (c) { c.newCount = count(c.items); c.breakdown = breakdown(c.items); });
+    var totalNew = columns.reduce(function (s, c) { return s + c.newCount; }, 0);
+
+    return { t: t, columns: columns, totalNew: totalNew };
+  }
+}
+</script>
+</body>
+</html>
