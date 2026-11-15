@@ -45,7 +45,7 @@ export function toFeedItems(feed: FeedConfig, raw: RawItem[], previous: FeedItem
 
     if (feed.kind === 'newsletter') {
       const html = entry.contentHtml ?? entry.summaryHtml ?? ''
-      item.summary = newsletterSummary(html)
+      item.summary = newsletterSummary(html, item.title)
       item.links = outboundLinks(html)
     } else {
       item.summary = summary ?? siteSummary(entry.summaryHtml, item.title)
@@ -85,9 +85,10 @@ function siteSummary(html: string | undefined, title: string): string | undefine
   return clampText(text, SUMMARY_LENGTH)
 }
 
-/** Plain-text start of an email, or nothing if what's left isn't mostly words. */
-function newsletterSummary(html: string): string | undefined {
-  const text = collapseWhitespace(toText(html).replace(/https?:\/\/\S+/g, ''))
+/** Plain-text start of an email (minus a repeat of the subject), or nothing if what's left isn't mostly words. */
+function newsletterSummary(html: string, title: string): string | undefined {
+  let text = collapseWhitespace(toText(html).replace(/https?:\/\/\S+/g, ''))
+  if (text.startsWith(title)) text = text.slice(title.length).trim()
   if (text.length < MIN_NEWSLETTER_SUMMARY) return undefined
   const letters = text.match(/\p{L}/gu)?.length ?? 0
   if (letters / text.length < 0.5) return undefined

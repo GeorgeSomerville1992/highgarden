@@ -17,12 +17,24 @@
   gap: 6px;
 }
 
+/*
+ * "NEW  Source · 3 days ago · 12 Nov". The "·" before the date sits in the column gap;
+ * when the date wraps to its own line the dot falls left of the row and is clipped.
+ */
 .meta {
   display: flex;
   align-items: center;
-  gap: 8px;
   flex-wrap: wrap;
+  column-gap: 20px;
+  row-gap: 2px;
+  overflow: hidden;
   font-size: 12px;
+}
+
+.lead {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .badge {
@@ -42,12 +54,16 @@
   gap: 5px;
 }
 
-/* Keeps the "·" with the date when the row wraps. */
 .when {
-  display: inline-flex;
-  gap: 8px;
+  position: relative;
   color: var(--muted);
   white-space: nowrap;
+}
+
+.when::before {
+  content: '·' / '';
+  position: absolute;
+  left: -12px;
 }
 
 .title {

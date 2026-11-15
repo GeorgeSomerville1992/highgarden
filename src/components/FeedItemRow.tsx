@@ -14,15 +14,16 @@ export function FeedItemRow({ item, now, onOpen }: FeedItemRowProps) {
       {item.divider && <div className={styles.divider}>Earlier</div>}
       <article className={styles.item}>
         <div className={styles.meta}>
-          {item.isNew && <span className={styles.badge}>NEW</span>}
-          <span className={styles.source}>
-            {item.isNewsletter && <EnvelopeIcon />}
-            {item.source}
+          <span className={styles.lead}>
+            {item.isNew && <span className={styles.badge}>NEW</span>}
+            <span className={styles.source}>
+              {item.isNewsletter && <EnvelopeIcon />}
+              {item.source}
+            </span>
           </span>
-          <span className={styles.when}>
-            <span aria-hidden="true">·</span>
-            <time dateTime={new Date(item.publishedAt).toISOString()}>{formatRelative(item.publishedAt, now)}</time>
-          </span>
+          <time className={styles.when} dateTime={new Date(item.publishedAt).toISOString()}>
+            {formatRelative(item.publishedAt, now)}
+          </time>
         </div>
         <h3 className={styles.title}>
           <a

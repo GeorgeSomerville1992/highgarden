@@ -77,6 +77,20 @@ describe('toFeedItems', () => {
     expect(confirm.links).toEqual([])
   })
 
+  it('leaves the subject out of a newsletter summary when the email repeats it', () => {
+    const raw: RawItem[] = [
+      {
+        guid: 'a',
+        title: 'Confirm your email',
+        titleIsHtml: false,
+        link: 'https://kill-the-newsletter.com/e/a.html',
+        contentHtml: '<h1>Confirm your email</h1><p>Hi, click the button to confirm your email and start getting issues.</p>',
+      },
+    ]
+    const [item] = toFeedItems(feed('aihero-newsletter'), raw, [], NOW)
+    expect(item.summary).toBe('Hi, click the button to confirm your email and start getting issues.')
+  })
+
   it('drops entries without an http(s) link and de-duplicates ids', () => {
     const raw: RawItem[] = [
       { title: 'Script', titleIsHtml: false, link: 'javascript:alert(1)', date: '2026-11-01' },
